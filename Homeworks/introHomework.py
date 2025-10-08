@@ -18,7 +18,7 @@ print("Q4:", (df.isnull().sum() > 0).sum())
 # Q5
 print("Q5:", round(df["fuel_efficiency_mpg"].max() * 4) / 4)
 
-# Q6 (conventional if/else style)
+# Q6
 medianHpByYear = df.groupby("model_year")["horsepower"].median()
 if medianHpByYear.iloc[-1] > medianHpByYear.iloc[0]:
     print("Q6: Yes, it increased")
